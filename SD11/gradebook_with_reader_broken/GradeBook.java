@@ -56,10 +56,10 @@ public class GradeBook {
             String tempStudentName = scanner.next();
             Student student = new Student(tempStudentName, 0, "", "", 2020);
             // FILL IN YOUR CODE HERE
-
-
-
-
+            int studentIndex = this.addStudent(student);
+            for(int i=0; i<numAssignments; i++){
+                this.setGrade(studentIndex, i, scanner.nextDouble());
+            }
             // remote total
             scanner.next();
         }
